@@ -1,0 +1,26 @@
+/* Resset Básico */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 24px;
+	background-color: lightcyan;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 100px auto 250px;
+	grid-template-rows: 100px auto;
+
+	width: 500px;
+	height: 500px;
+	margin: 0 auto; /* Centra elementos con un ancho fijo en e contenedor */
+	background-color: darkslateblue;
+}
+
+.item {
+	background-color: lightcoral;
+}
