@@ -12,15 +12,36 @@ body {
 
 .container {
 	display: grid;
-	grid-template-columns: 100px auto 250px;
-	grid-template-rows: 100px auto;
+	grid-template-columns: 100px 100px 100px;
+	grid-template-rows: repeat(3, 100px) /* 100px 100px */;
+	grid-template-areas: 
+		"header header header"
+		"main   main   sidebar"
+		"footer footer footer";
 
 	width: 500px;
 	height: 500px;
-	margin: 0 auto; /* Centra elementos con un ancho fijo en e contenedor */
+	margin: 0 auto;
+
 	background-color: darkslateblue;
 }
 
-.item {
+.header {
+	grid-area: header;
+	background-color: lightblue;
+}
+
+.main {
+	grid-area: main;
 	background-color: lightcoral;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	background-color: lightgreen;
+}
+
+.footer {
+	grid-area: footer;
+	background-color: lightsalmon;
 }
